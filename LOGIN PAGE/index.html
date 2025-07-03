@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOGIN PAGE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="Loginform">
+    <form class="form">
+      <h3>Welcome to <span>LoginHub.</span></h3>
+
+      <!-- Email Input -->
+      <div class="input-group">
+        <input type="email" id="email" required />
+        <label for="email">Email</label>
+        <i class="fas fa-envelope icon"></i>
+      </div>
+
+      <!-- Password Input -->
+      <div class="input-group">
+        <input type="password" id="password" required />
+        <label for="password">Password</label>
+        <i class="fas fa-lock icon"></i>
+        <span class="toggle" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit">Submit</button>
+
+      <!-- Optional Social Login (Remove if not needed) -->
+      <div class="or-divider">or</div>
+
+      <div class="social-login">
+        <button class="google"><i class="fab fa-google"></i> Google</button>
+        <button class="facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const pass = document.getElementById("password");
+      pass.type = pass.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
